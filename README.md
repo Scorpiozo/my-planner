@@ -5,7 +5,7 @@
 ![UI Architecture](https://img.shields.io/badge/Architecture-Glassmorphism-white?style=for-the-badge)
 ![Deployment](https://img.shields.io/badge/Deployment-Live-00FFC3?style=for-the-badge)
 
-**PLANNER CORE** is a high-performance productivity HUD (Heads-Up Display). It eliminates the friction of traditional task management by providing an immersive, glassmorphic environment where objectives are managed with zero latency and high visual precision.
+**PLANNER CORE** is a high-performance productivity HUD (Heads-Up Display). It eliminates the friction of traditional task management by providing an immersive, glassmorphic environment where objectives are managed with zero latency and high visual precision. (Click the calendar icon to set a due date before clicking add task)
 
 ---
 
