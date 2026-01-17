@@ -50,7 +50,7 @@ PLANNER CORE is built on three pillars of interface engineering:
 No installation or environment configuration required.
 
 1.  **Direct Access:** [scorpiozo.github.io/my-planner/](https://scorpiozo.github.io/my-planner/)
-2.  **Local Execution:**
+2. **Local Execution:**
    ```bash
    git clone [https://github.com/scorpiozo/my-planner.git](https://github.com/scorpiozo/my-planner.git)
    cd my-planner
