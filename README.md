@@ -2,10 +2,10 @@
 ### High-Fidelity Task Orchestration | [System Access](https://scorpiozo.github.io/my-planner/)
 
 ![System Status](https://img.shields.io/badge/System_Status-Active-00FFC3?style=for-the-badge)
-![UI Architecture](https://img.shields.io/badge/Architecture-Glassmorphism_v2-white?style=for-the-badge)
+![UI Architecture](https://img.shields.io/badge/Architecture-Glassmorphism-white?style=for-the-badge)
 ![Deployment](https://img.shields.io/badge/Deployment-Live-00FFC3?style=for-the-badge)
 
-**PLANNER CORE** is a high-performance productivity HUD (Heads-Up Display) built with a "God Design" philosophy. It eliminates the friction of traditional task management by providing an immersive, glassmorphic environment where objectives are managed with zero latency and high visual precision.
+**PLANNER CORE** is a high-performance productivity HUD (Heads-Up Display). It eliminates the friction of traditional task management by providing an immersive, glassmorphic environment where objectives are managed with zero latency and high visual precision.
 
 ---
 
@@ -53,8 +53,9 @@ No installation or environment configuration required.
 2.  **Local Execution:** ```bash
     git clone [https://github.com/scorpiozo/my-planner.git](https://github.com/scorpiozo/my-planner.git)
     cd my-planner
-    # Open index.html via Live Server for full Notification API support
-    ```
+
+    Open index.html via Live Server for full Notification API support
+
 
 ---
 
