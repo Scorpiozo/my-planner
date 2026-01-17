@@ -52,10 +52,9 @@ No installation or environment configuration required.
 1.  **Direct Access:** [scorpiozo.github.io/my-planner/](https://scorpiozo.github.io/my-planner/)
 2. **Local Execution:**
    ```bash
-   git clone [https://github.com/scorpiozo/my-planner.git](https://github.com/scorpiozo/my-planner.git)
+   git clone https://github.com/scorpiozo/my-planner.git
    cd my-planner
    # Open index.html via Live Server for full Notification API support
-
 
 ---
 
