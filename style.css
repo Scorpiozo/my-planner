@@ -235,6 +235,109 @@ select { background: none; border: none; color: var(--bright-mint); font-weight:
 .settings-footer { text-align: center; margin-top: 20px; font-size: 0.5rem; color: #777676; }
 
 
+@media (max-width: 768px) {
+    body {
+        height: auto;
+        min-height: 100vh;
+        overflow-y: auto;
+        align-items: flex-start;
+        padding: 15px;
+    }
+
+    .glass-shell {
+        flex-direction: column; 
+        height: auto;
+        min-height: 85vh;
+        margin-bottom: 80px; 
+        border-radius: 25px;
+    }
+
+    .side-bar {
+        width: 100%;
+        height: 70px;
+        flex-direction: row;
+        border-right: none;
+        border-top: 1px solid var(--border);
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        z-index: 1500;
+        background: rgba(8, 8, 8, 0.9);
+        backdrop-filter: blur(20px);
+        padding: 0 30px;
+        justify-content: space-between;
+    }
+
+    .nav-stack {
+        margin-top: 0;
+        flex-direction: row;
+        width: auto;
+        justify-content: center;
+        gap: 30px;
+    }
+
+    .workspace {
+        padding: 25px 20px;
+    }
+
+    .workspace-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .header-tools {
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .search-bar {
+        width: 100%;
+    }
+
+    .search-bar input {
+        width: 100%;
+    }
+
+    .progress-display {
+        width: 100%;
+    }
+
+    .input-container {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+        align-items: stretch;
+    }
+
+    #task-name {
+        width: 100%;
+        font-size: 0.9rem;
+    }
+
+    .input-meta {
+        justify-content: space-between;
+    }
+
+    #floating-bell {
+        bottom: 90px;
+        right: 20px;
+        width: 50px;
+        height: 50px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 { font-size: 1.2rem; }
+    .task-card {
+        padding: 15px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+}
 
 
 
