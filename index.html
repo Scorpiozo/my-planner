@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PLANNER | MINT</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <div class="background-elements">
+        <div class="orb cocoa" id="orb-1"></div>
+        <div class="orb mint" id="orb-2"></div>
+    </div>
+
+    <main class="glass-shell">
+        <aside class="side-bar">
+            <div class="logo"><i data-lucide="layers" class="mint-icon"></i></div>
+            <nav class="nav-stack">
+                <div class="nav-btn active" data-filter="all"><i data-lucide="check-circle"></i></div>
+                <div class="nav-btn" data-filter="Work"><i data-lucide="briefcase"></i></div>
+                <div class="nav-btn" data-filter="Personal"><i data-lucide="user"></i></div>
+                <div class="nav-btn" data-filter="Urgent"><i data-lucide="zap"></i></div>
+            </nav>
+            <div class="nav-bottom"><i data-lucide="settings"></i></div>
+        </aside>
+
+        <section class="workspace">
+            <header class="workspace-header">
+                <div class="greeting">
+                    <h1>PLANNER<span>CORE</span></h1>
+                    <p id="system-date">LOADING...</p>
+                </div>
+                
+                <div class="header-tools">
+                    <div class="search-bar">
+                        <i data-lucide="search" size="14"></i>
+                        <input type="text" id="search-input" placeholder="Search objectives...">
+                    </div>
+                    <div class="progress-display">
+                        <div class="progress-stats">
+                            <span class="label">EFFICIENCY</span>
+                            <span id="percent-val">0%</span>
+                        </div>
+                        <div class="progress-track"><div id="progress-bar"></div></div>
+                    </div>
+                </div>
+            </header>
+
+            <div class="input-container">
+                <input type="text" id="task-name" placeholder="Add new task..." autocomplete="off">
+                <div class="input-meta">
+                    <select id="task-cat">
+                        <option value="Work">Work</option>
+                        <option value="Personal">Personal</option>
+                        <option value="Urgent">Urgent</option>
+                    </select>
+                    <div class="due-date-wrapper">
+                        <input type="datetime-local" id="task-due" style="display:none;">
+                        <button id="date-trigger" class="meta-btn">
+                            <i data-lucide="calendar"></i>
+                        </button>
+                    </div>
+                    <button id="add-task"><i data-lucide="plus"></i></button>
+                </div>
+            </div>
+
+            <div class="task-viewport">
+                <ul id="task-list"></ul>
+            </div>
+        </section>
+    </main>
+
+    <div class="notification-bell" id="floating-bell">
+        <i data-lucide="bell"></i>
+        <span class="bell-dot"></span>
+        <div id="notif-popup">ALERT</div>
+    </div>
+    <div class="settings-modal" id="settings-menu">
+        <div class="settings-content">
+            <header>
+                <h3>SYSTEM<span>CONFIG</span></h3>
+            </header>
+            
+            <div class="setting-group">
+                <label>CORE ACCENT</label>
+                <div class="theme-picker">
+                    <div class="color-dot active" data-color="#00FFC3" style="background:#00FFC3;"></div>
+                    <div class="color-dot" data-color="#00D1FF" style="background:#00D1FF;"></div>
+                    <div class="color-dot" data-color="#FFD700" style="background:#FFD700;"></div>
+                    <div class="color-dot" data-color="#FF4B2B" style="background:#FF4B2B;"></div>
+                </div>
+            </div>
+
+            <div class="setting-group">
+                <label>DATA MANAGEMENT</label>
+                <button class="danger-btn" id="clear-data">PURGE ALL TASKS</button>
+            </div>
+
+            <div class="settings-footer">
+                <p>CLICK OUTSIDE TO EXIT</p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    
+</body>
+</html>
