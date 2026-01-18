@@ -235,49 +235,86 @@ select { background: none; border: none; color: var(--bright-mint); font-weight:
 .settings-footer { text-align: center; margin-top: 20px; font-size: 0.5rem; color: #777676; }
 
 
+.empty-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100%; /* Fill the viewport */
+    width: 100%;
+    color: rgba(255, 255, 255, 0.2);
+    animation: taskIn 0.4s ease forwards;
+    pointer-events: none; 
+    user-select: none;
+    padding-bottom: 50px; /* Counter-balance the header height for perfect centering */
+}
+
+.empty-state i {
+    margin-bottom: 15px;
+    opacity: 0.3;
+    width: 40px;
+    height: 40px;
+}
+
+.empty-state p {
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    line-height: 1.6;
+}
+
 @media (max-width: 768px) {
+    /* 1. Reset Body for a clean 'App' feel */
     body {
-        height: auto;
-        min-height: 100vh;
-        overflow-y: auto;
+        padding: 10px;
+        height: 100dvh; /* Dynamic viewport height for mobile browsers */
         align-items: flex-start;
-        padding: 15px;
+        overflow: hidden;
     }
 
     .glass-shell {
-        flex-direction: column; 
-        height: auto;
-        min-height: 85vh;
-        margin-bottom: 80px; 
+        flex-direction: column;
+        height: 100%;
         border-radius: 25px;
     }
 
+    /* 2. Fix the Side-bar (Now Bottom Nav) */
     .side-bar {
-        width: 100%;
-        height: 70px;
-        flex-direction: row;
-        border-right: none;
-        border-top: 1px solid var(--border);
         position: fixed;
-        bottom: 0;
-        left: 0;
-        z-index: 1500;
-        background: rgba(8, 8, 8, 0.9);
+        bottom: 15px;
+        left: 5%;
+        width: 90%;
+        height: 65px;
+        flex-direction: row; /* Layout icons horizontally */
+        justify-content: space-between; /* Space out Logo, Nav, and Settings */
+        align-items: center;
+        padding: 0 20px;
+        border-right: none;
+        border: 1px solid var(--border);
+        background: rgba(10, 10, 10, 0.8);
         backdrop-filter: blur(20px);
-        padding: 0 30px;
-        justify-content: space-between;
+        -webkit-backdrop-filter: blur(20px);
+        border-radius: 20px;
+        z-index: 1000;
     }
 
+    /* Hide logo on mobile to save space, or keep it small */
+    .side-bar .logo { margin: 0; }
+    
     .nav-stack {
-        margin-top: 0;
+        margin: 0 !important; /* Kills the desktop top margin */
         flex-direction: row;
-        width: auto;
-        justify-content: center;
-        gap: 30px;
+        gap: 20px;
+        flex: 1;
+        justify-content: center; /* Centers the 4 main icons */
     }
 
+    .nav-bottom { margin: 0; } /* Centers the settings gear */
+
+    /* 3. Workspace Adjustments */
     .workspace {
-        padding: 25px 20px;
+        padding: 20px 15px 100px 15px;
+        overflow-y: auto;
     }
 
     .workspace-header {
@@ -289,53 +326,49 @@ select { background: none; border: none; color: var(--bright-mint); font-weight:
     .header-tools {
         width: 100%;
         flex-direction: column;
-        align-items: flex-start;
         gap: 15px;
     }
 
-    .search-bar {
-        width: 100%;
-    }
+    .search-bar, .progress-display { width: 100%; }
 
-    .search-bar input {
-        width: 100%;
-    }
-
-    .progress-display {
-        width: 100%;
-    }
-
+    /* 4. The "Long Prompt" Input Alignment Fix */
     .input-container {
-        flex-direction: column;
-        gap: 15px;
+        flex-direction: column; /* Stacking on mobile is safer for long placeholders */
         padding: 15px;
+        gap: 12px;
         align-items: stretch;
     }
 
     #task-name {
         width: 100%;
         font-size: 0.9rem;
+        padding: 5px 0;
+        /* --- TEXTAREA FIXES --- */
+        background: transparent;
+        border: none;
+        color: white;
+        outline: none;
+        resize: none;      /* REMOVES THE WHITE DOT */
+        overflow: hidden;  /* Keeps it clean */
+        font-family: inherit; 
     }
 
+    /* This aligns Select, Date, and Plus button in one neat row below the text */
     .input-meta {
+        display: flex;
         justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        border-top: 1px solid var(--border);
+        padding-top: 10px;
     }
 
+    .due-date-wrapper { display: flex; align-items: center; }
+
+    /* 5. Notifications & Popups */
     #floating-bell {
         bottom: 90px;
-        right: 20px;
-        width: 50px;
-        height: 50px;
-    }
-}
-
-@media (max-width: 480px) {
-    h1 { font-size: 1.2rem; }
-    .task-card {
-        padding: 15px;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 10px;
+        right: 15px;
     }
 }
 

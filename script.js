@@ -186,6 +186,20 @@ const MintCore = {
             return mF && mS;
         });
 
+        if (filtered.length === 0) {
+            const emptyMsg = document.createElement('div');
+            emptyMsg.className = 'empty-state';
+            emptyMsg.innerHTML = `
+                <i data-lucide="clipboard-list" style="width:40px; height:40px; margin-bottom:15px; opacity:0.3;"></i>
+                <p style="color:rgba(255,255,255,0.3); font-size:0.9rem; text-align:center;">
+                    No objectives under <span style="color:var(--bright-mint); font-weight:bold;">${this.filter.toUpperCase()}</span> yet.<br>
+                    Add one to begin.
+                </p>
+            `;
+            this.list.appendChild(emptyMsg);
+            lucide.createIcons();
+        }
+
         filtered.forEach(t => {
             const li = document.createElement('li');
             const dueDateLabel = t.due ? `<span class="task-date-tag">DUE: ${new Date(t.due).toLocaleString([], {month:'short', day:'numeric', hour:'2-digit', minute:'2-digit'})}</span>` : '';
