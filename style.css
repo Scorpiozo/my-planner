@@ -264,10 +264,9 @@ select { background: none; border: none; color: var(--bright-mint); font-weight:
 }
 
 @media (max-width: 768px) {
-    /* 1. Reset Body for a clean 'App' feel */
     body {
         padding: 10px;
-        height: 100dvh; /* Dynamic viewport height for mobile browsers */
+        height: 100dvh; 
         align-items: flex-start;
         overflow: hidden;
     }
@@ -277,16 +276,14 @@ select { background: none; border: none; color: var(--bright-mint); font-weight:
         height: 100%;
         border-radius: 25px;
     }
-
-    /* 2. Fix the Side-bar (Now Bottom Nav) */
     .side-bar {
         position: fixed;
         bottom: 15px;
         left: 5%;
         width: 90%;
         height: 65px;
-        flex-direction: row; /* Layout icons horizontally */
-        justify-content: space-between; /* Space out Logo, Nav, and Settings */
+        flex-direction: row; 
+        justify-content: space-between; 
         align-items: center;
         padding: 0 20px;
         border-right: none;
@@ -298,20 +295,18 @@ select { background: none; border: none; color: var(--bright-mint); font-weight:
         z-index: 1000;
     }
 
-    /* Hide logo on mobile to save space, or keep it small */
     .side-bar .logo { margin: 0; }
     
     .nav-stack {
-        margin: 0 !important; /* Kills the desktop top margin */
+        margin: 0 !important; 
         flex-direction: row;
         gap: 20px;
         flex: 1;
-        justify-content: center; /* Centers the 4 main icons */
+        justify-content: center; 
     }
 
-    .nav-bottom { margin: 0; } /* Centers the settings gear */
+    .nav-bottom { margin: 0; } 
 
-    /* 3. Workspace Adjustments */
     .workspace {
         padding: 20px 15px 100px 15px;
         overflow-y: auto;
@@ -331,9 +326,8 @@ select { background: none; border: none; color: var(--bright-mint); font-weight:
 
     .search-bar, .progress-display { width: 100%; }
 
-    /* 4. The "Long Prompt" Input Alignment Fix */
     .input-container {
-        flex-direction: column; /* Stacking on mobile is safer for long placeholders */
+        flex-direction: column; 
         padding: 15px;
         gap: 12px;
         align-items: stretch;
@@ -343,17 +337,15 @@ select { background: none; border: none; color: var(--bright-mint); font-weight:
         width: 100%;
         font-size: 0.9rem;
         padding: 5px 0;
-        /* --- TEXTAREA FIXES --- */
         background: transparent;
         border: none;
         color: white;
         outline: none;
-        resize: none;      /* REMOVES THE WHITE DOT */
-        overflow: hidden;  /* Keeps it clean */
+        resize: none;      
+        overflow: hidden;  
         font-family: inherit; 
     }
 
-    /* This aligns Select, Date, and Plus button in one neat row below the text */
     .input-meta {
         display: flex;
         justify-content: space-between;
@@ -365,7 +357,6 @@ select { background: none; border: none; color: var(--bright-mint); font-weight:
 
     .due-date-wrapper { display: flex; align-items: center; }
 
-    /* 5. Notifications & Popups */
     #floating-bell {
         bottom: 90px;
         right: 15px;
