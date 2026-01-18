@@ -1,5 +1,5 @@
 # 🔘 PLANNER CORE
-### High-Fidelity Task Orchestration | [System Access](https://scorpiozo.github.io/my-planner/)
+### High-Fidelity Task Orchestration | [System Access](https://scorpiozo-todo-planner.vercel.app/)
 
 ![System Status](https://img.shields.io/badge/System_Status-Active-00FFC3?style=for-the-badge)
 ![UI Architecture](https://img.shields.io/badge/Architecture-Glassmorphism-white?style=for-the-badge)
@@ -49,7 +49,7 @@ PLANNER CORE is built on three pillars of interface engineering:
 
 No installation or environment configuration required.
 
-1.  **Direct Access:** [scorpiozo.github.io/my-planner/](https://scorpiozo.github.io/my-planner/)
+1.  **Direct Access:** [scorpiozo.github.io/my-planner/](https://scorpiozo-todo-planner.vercel.app/)
 2. **Local Execution:**
    ```bash
    git clone https://github.com/scorpiozo/my-planner.git
